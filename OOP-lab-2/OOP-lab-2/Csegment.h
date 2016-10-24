@@ -1,12 +1,15 @@
 #pragma once
-#include <utility>
-using std::pair;
+#define M_PI       3.14159265358979323846 
+#include <iostream>
+using std::cin;
+using std::cout;
 class Csegment
 {
-	double x1, y1, x2, y2;
+protected:
+	double x;
 public:
-	Csegment(pair<pair <double, double>, pair <double, double>> segment); // Конструктор
-	pair<pair <double, double>, pair <double, double>>  getSegment(void); // Гетер точки
-	void setSegment(pair<pair <double, double>, pair <double, double>>  segment); // Сетер точки
+	Csegment(double xyz); // Конструктор
+	double getSegment() { return x; }; // Гетер точки
+	void setSegment(double x1) { x = x1; }; // Сетер точки
 };
 

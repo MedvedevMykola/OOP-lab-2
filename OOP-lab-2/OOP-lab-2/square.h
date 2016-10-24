@@ -1,12 +1,14 @@
 #pragma once
-#include <utility>
-using std::pair;
+#include "Csegment.h"
+#include <math.h>
 
-class square
+class square: public Csegment
 {
+protected:
 	double len;
 public:
-	square(pair<pair <double, double>, pair <double, double>> segment);
-	
+	square(double xyz);
+	double getLen();
+	double getSquare();
 };
 
